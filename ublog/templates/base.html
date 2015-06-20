@@ -7,15 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{% static "icons/favicon.ico" %}">
+    <link rel="icon" href="{% static "/icons/favicon.ico" %}">
+
     <link href="/feed/" rel="alternate" type="application/rss+xml" title="Q Blog Feed" />
-    <title>Blog Template for Bootstrap</title>
+    <title>Data science dojo</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet"> changed-->
+    
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{% static "css/blog.css" %}" rel="stylesheet">
+    <!-- <link href="{% static "css/blog.css" %}" rel="stylesheet"> -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,26 +28,31 @@
   </head>
 
   <body>
+  
+  
 
     <div class="blog-masthead">
       <div class="container">
-        <nav class="blog-nav">
+    
+	<nav class="blog-nav">
           <a class="blog-nav-item active" href="{% url "index" %}">Home</a>
-          <a class="blog-nav-item" href="#">New features</a>
-          <a class="blog-nav-item" href="#">Press</a>
-          <a class="blog-nav-item" href="#">New hires</a>
-          <a class="blog-nav-item" href="#">About</a>
+          <a class="blog-nav-item" href="#">Doing</a>
+          <a class="blog-nav-item" href="#">Thinking</a>
+          <a class="blog-nav-item" href="#">Play</a>
+          <a class="blog-nav-item" href="#">About me</a>
         </nav>
       </div>
     </div>
 
     <div class="container">
 
-      <div class="blog-header">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
-        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
-      </div>
+	<div class="blog-header">
+	  <h1 class="blog-title">Data science dojo</h1>
+	  <p class="lead blog-description">Linearity as a pattern.</p>
+	</div>
 
+	<hr>
+      
       <div class="row">
 
         <div class="col-sm-8 blog-main">
@@ -61,7 +69,7 @@
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <p>The description about <em>copyrights</em> can come here or any other thing in about.</p>
           </div>
         </div><!-- /.blog-sidebar -->
 
