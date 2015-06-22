@@ -6,9 +6,12 @@
 {% block blog_entries %}
 <div class="post">
     <h3><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h3>
-    <p class="meta">
-      {{ object.created }} |
-      Tagged under {{  object.tags.all|join:", " }}
+    <p class="meta_post">
+      <i>{{ object.created }}</i> |
+      <!-- Tagged under {{  object.tags.all|join:", " }} -->
+      {% for tag in object.tags.all %}
+      <a class = "post-category" href="{% url "tag_index" slug=tag.slug %}">{{ tag }}</a> 
+      {% endfor %}
     </p>
     {{ object.body|markdown }}
   </div> 

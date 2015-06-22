@@ -7,6 +7,10 @@ class Tag(models.Model):
   
   def __str__(self):
     return self.slug  ##String representation to the slug field
+  
+  def get_absolute_url(self):
+    return reverse("tag_index", kwargs={"slug": self.slug})  ##modification to get url for the tag
+  
 
 class EntryQuerySet(models.QuerySet):
   def published(self):
